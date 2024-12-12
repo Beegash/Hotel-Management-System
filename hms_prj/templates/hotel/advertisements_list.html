@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisements</title>
+</head>
+<body>
+    <h2>Your Advertisements</h2>
+    <a href="{% url 'add_advertisement' %}">Create New Advertisement</a>
+    <ul>
+        {% for ad in advertisements %}
+        <li>
+            <h3>{{ ad.title }}</h3>
+            <p>{{ ad.description }}</p>
+            <p>From: {{ ad.start_date }} To: {{ ad.end_date }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

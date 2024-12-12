@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+</head>
+<body>
+    <h2>Hotels</h2>
+    <a href="{% url 'add_hotel' %}">Add New Hotel</a>
+    <ul>
+        {% for hotel in hotels %}
+        <li>
+            <h3>{{ hotel.name }}</h3>
+            <p>{{ hotel.address }}</p>
+            <p>Phone: {{ hotel.phone }}</p>
+            <p>Rating: {{ hotel.rating }}</p>
+            <a href="{% url 'hotel_detail' hotel.id %}">View Details</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
