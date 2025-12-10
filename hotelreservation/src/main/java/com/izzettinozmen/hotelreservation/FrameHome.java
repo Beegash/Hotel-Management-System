@@ -77,7 +77,7 @@ public class FrameHome extends javax.swing.JFrame {
         btnShowMore = new javax.swing.JButton();
         txtWelcome = new javax.swing.JLabel();
         panelHotel2 = new javax.swing.JPanel();
-        ImageIcon otel2resim = new ImageIcon("/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/otel2.jpg");
+        ImageIcon otel2resim = new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/otel2.jpg"));
         Image imgotel2 = otel2resim.getImage();
         Image scaledImg2 = imgotel2.getScaledInstance(200, 150, Image.SCALE_SMOOTH); // Genişlik ve yükseklik değerlerini belirleyin
         ImageIcon kucukResim2 = new ImageIcon(scaledImg2);
@@ -90,7 +90,7 @@ public class FrameHome extends javax.swing.JFrame {
         btnHotel2 = new javax.swing.JButton();
         panelHotel1 = new javax.swing.JPanel();
         txtHotel1 = new javax.swing.JLabel();
-        ImageIcon otel1resim = new ImageIcon("/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/otel1.jpg");
+        ImageIcon otel1resim = new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/otel1.jpg"));
         Image imgotel1 = otel1resim.getImage();
         Image scaledImg1 = imgotel1.getScaledInstance(200, 150, Image.SCALE_SMOOTH); // Genişlik ve yükseklik değerlerini belirleyin
         ImageIcon kucukResim1 = new ImageIcon(scaledImg1);
@@ -101,7 +101,7 @@ public class FrameHome extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         btnHotel1 = new javax.swing.JButton();
         panelHotel3 = new javax.swing.JPanel();
-        ImageIcon otel3resim = new ImageIcon("/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/otel3.jpg");
+        ImageIcon otel3resim = new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/otel3.jpg"));
         Image imgotel3 = otel3resim.getImage();
         Image scaledImg3 = imgotel3.getScaledInstance(200, 150, Image.SCALE_SMOOTH); // Genişlik ve yükseklik değerlerini belirleyin
         ImageIcon kucukResim3 = new ImageIcon(scaledImg3);
@@ -503,7 +503,7 @@ public class FrameHome extends javax.swing.JFrame {
         FrameUser adminMenuFrame = new FrameUser();
 
         showSplashAndOpen(adminMenuFrame,
-                "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png",
+                getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png").getPath(),
                 "Loading Settings...");
     }//GEN-LAST:event_btnUserProfActionPerformed
 
@@ -516,8 +516,7 @@ public class FrameHome extends javax.swing.JFrame {
 
         JLabel iconLabel = new JLabel();
         try {
-            String localImagePath = "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(localImagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
             iconLabel.setIcon(icon);
         } catch (Exception e) {
             iconLabel.setText("Icon Cannot Loaded");
@@ -555,8 +554,7 @@ public class FrameHome extends javax.swing.JFrame {
 
         JLabel iconLabel = new JLabel();
         try {
-            String localImagePath = "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(localImagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
             iconLabel.setIcon(icon);
         } catch (Exception e) {
             iconLabel.setText("Icon Cannot Loaded");
@@ -598,8 +596,7 @@ public class FrameHome extends javax.swing.JFrame {
 
         JLabel iconLabel = new JLabel();
         try {
-            String localImagePath = "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(localImagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
             iconLabel.setIcon(icon);
         } catch (Exception e) {
             iconLabel.setText("Icon Cannot Loaded");

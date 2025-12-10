@@ -37,13 +37,9 @@ public class FrameSignUpPage extends javax.swing.JFrame {
         String address = txtAddress.getText();
         String gender = (String) cmbGender.getSelectedItem();
 
-        String dbUrl = "jdbc:mysql://localhost:3306/your_database_name"; // Veritabanı URL'i
-        String dbUsername = "root"; // Veritabanı kullanıcı adı
-        String dbPassword = ""; // Veritabanı şifresi
-
         String insertQuery = "INSERT INTO users (username, password, name, surname, birth_year, email, phone, address, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword); PreparedStatement pstmt = conn.prepareStatement(insertQuery)) {
+        try (Connection conn = DBConnection.getConnection(); PreparedStatement pstmt = conn.prepareStatement(insertQuery)) {
 
             pstmt.setString(1, username);
             pstmt.setString(2, password);

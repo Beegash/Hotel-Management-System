@@ -293,8 +293,7 @@ public class FrameHotelList extends javax.swing.JFrame {
 
         JLabel iconLabel = new JLabel();
         try {
-            String localImagePath = "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(localImagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
             iconLabel.setIcon(icon);
         } catch (Exception e) {
             iconLabel.setText("Icon Cannot Loaded");
@@ -328,7 +327,7 @@ public class FrameHotelList extends javax.swing.JFrame {
         FrameUser adminMenuFrame = new FrameUser();
 
         showSplashAndOpen(adminMenuFrame,
-                "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png",
+                getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png").getPath(),
                 "Loading Settings...");
     }//GEN-LAST:event_btnUserProfActionPerformed
 
@@ -341,8 +340,7 @@ public class FrameHotelList extends javax.swing.JFrame {
 
         JLabel iconLabel = new JLabel();
         try {
-            String localImagePath = "/Users/ifozmen/NetBeansProjects/hotelreservation/src/main/java/com/izzettinozmen/hotelreservation/Hotels/pngegg.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(localImagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/com/izzettinozmen/hotelreservation/Hotels/pngegg.png")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
             iconLabel.setIcon(icon);
         } catch (Exception e) {
             iconLabel.setText("Icon Cannot Loaded");

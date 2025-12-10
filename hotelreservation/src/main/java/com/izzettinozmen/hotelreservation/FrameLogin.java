@@ -14,8 +14,9 @@ import javax.swing.JOptionPane;
  */
 public class FrameLogin extends javax.swing.JFrame {
 
-    Admin adm1 = new Admin("beegash", "1234", "5417891115", "ozmen.izzettinfurkan@gmail.com", "CEO");
-    User usr1 = new User("ifozmen", "1234", "5052624823", "izofuriko@gmail.com");
+    // Demo admin account - Change this in production!
+    Admin adm1 = new Admin("admin", "admin123", "5XXXXXXXXX", "admin@example.com", "CEO");
+    User usr1 = new User("user", "user123", "5XXXXXXXXX", "user@example.com");
 
     /**
      * Creates new form LogIn
@@ -432,7 +433,7 @@ public class FrameLogin extends javax.swing.JFrame {
             PreparedStatement stmt = null;
             ResultSet rs = null;
             try {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "1287");
+                connection = DBConnection.getConnection(); // Use centralized DB connection
                 String query = "SELECT * FROM users WHERE username = ? AND password = ?";
                 stmt = connection.prepareStatement(query);
                 stmt.setString(1, username);
